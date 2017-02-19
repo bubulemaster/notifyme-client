@@ -1,4 +1,4 @@
-[![NotifyMe client logo](https://raw.githubusercontent.com/bubulemaster/notifyme-client/master/src/img/logo-big.png)]
+![NotifyMe client logo](https://raw.githubusercontent.com/bubulemaster/notifyme-client/master/src/img/logo-big.png)
 
 # NotifyMe Offical Client
 
