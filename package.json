@@ -1,0 +1,44 @@
+{
+  "name": "notifyme-client",
+  "version": "0.0.1",
+  "description": "NotifyMe Client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "zip": "zip -r -X  notifyme-client.zip . -x node_modules/\\* -x jspm_packages/\\*"
+  },
+  "author": "Emeric MARTINEAU",
+  "license": "BSD-3-Clause",
+  "jspm": {
+    "dependencies": {
+      "Semantic-Org/Semantic-UI": "github:Semantic-Org/Semantic-UI@^2.2.7",
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^2.0.1",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.1.0",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.8",
+      "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.1.0",
+      "aurelia-semantic-ui": "npm:aurelia-semantic-ui@^0.0.1-alpha.12",
+      "jquery": "npm:jquery@^3.1.1",
+      "lodash": "npm:lodash@^4.17.2",
+      "moment": "npm:moment@^2.15.0",
+      "redux": "npm:redux@^3.6.0",
+      "semantic-ui": "github:Semantic-Org/Semantic-UI@^2.2.7",
+      "socket.io-client": "github:socketio/socket.io-client@^1.7.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^6.22.1",
+      "babel-runtime": "npm:babel-runtime@^6.22.0",
+      "core-js": "npm:core-js@^2.4.1"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "$"
+    ],
+    "ignore": [
+      "config.js"
+    ]
+  }
+}

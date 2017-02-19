@@ -1,0 +1,53 @@
+<template>
+  <div class="add-message">
+    <div>
+      <button class="positive ui button"
+        click.delegate="toggleAddMessagePopup()">
+        <i class="angle double down icon" ref="iconDisplayAddMessage"></i>
+        Post new message
+      </button>
+
+      Talk Unread message (%x%)
+    </div>
+    <form class="ui form" ref="popupAddMessage">
+      <div class="field">
+        <label>Stream</label>
+        <div class="ui search" ref="streamsSearchInput">
+          <div class="ui icon input">
+            <input type="text" value.bind="newMessage.stream" class="prompt" placeholder="Search stream..." />
+            <i class="search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <input type="text" value.bind="newMessage.message" />
+      </div>
+
+      <button class="cancel negative ui button" click.delegate="closeAddMessagePopup()">Cancel</button>
+      <button class="ok positive ui button" click.delegate="addMessagePopup()">Send</button>
+    </form>
+  </div>
+
+  <div repeat.for="m of messages" class="message">
+    <div class="${m.msgtype}">
+      <i if.bind="m.msgtype == 'notification'" class="comment outline icon"></i>
+    </div>
+    <div>
+      ${m.message}
+    </div>
+    <div>
+      <div data-title="by ${m.username}" data-content="on ${m.stream}" class="extra-info"
+        mouseover.delegate="displayMoreInformationPopup($event.target)">
+        ...
+      </div>
+    </div>
+    <!--
+${m.message}<br />
+${m.username}<br />
+${m.title}<br />
+${m.msgtype}<br />
+${m.stream}-->
+  </div>
+</template>

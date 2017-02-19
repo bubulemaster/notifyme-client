@@ -1,0 +1,29 @@
+<template>
+  <div class="streams-menu">
+    <div class="ui icon input" ref="streamsFilterInput">
+      <input type="text" value.bind="searchTerm" class="prompt" placeholder="Filter stream..." />
+      <i class="search icon"></i>
+    </div>
+    <button class="ui primary button" if.bind="updateUser" click.trigger="saveStream($event)">
+      Save
+    </button>
+  </div>
+
+  <div repeat.for="s of existingStream | filter:searchTerm:filterFunc" class="streams">
+    <div>
+      <button class="ui icon button ${s.checked ? 'red' : 'green'}" click.delegate="addRemoveStream(s)">
+        <i class="alarm ${s.checked ? 'mute' : ''} icon"></i>
+      </button>
+    </div>
+    <div>
+      <h1>${s.name}</h1>
+      ${s.description}
+    </div>
+    <div>
+      <div data-title="by ${s.username}" data-content="created: ${s.createdate}" class="extra-info"
+        mouseover.delegate="displayMoreInformationPopup($event.target)">
+        ...
+      </div>
+    </div>
+  </div>
+</template>

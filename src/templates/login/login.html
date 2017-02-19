@@ -1,0 +1,26 @@
+<template>
+  <form class="ui form login">
+    <div>
+      <div class="field">
+        <img src="src/img/logo.png" />
+
+        <label>Username</label>
+        <div class="field">
+          <input type="text" placeholder="Enter your LDAP user" value.bind="username" />
+        </div>
+
+        <label>Password</label>
+        <div class="field">
+          <input type="password" value.bind="password" />
+        </div>
+
+        <label>Server url</label>
+        <div class="field">
+          <input type="text" value.bind="url" />
+        </div>
+
+        <button class="ui button primary" type="submit" click.trigger='login()'>Login</button>
+      </div>
+    </div>
+  </form>
+</template>
