@@ -1,7 +1,7 @@
 /******************************************************************************
  * Talk template
  */
-.message > div {
+.talk-message > div {
   display: table-cell;
   vertical-align: middle;
   padding: 5px 5px 5px 5px;
@@ -16,7 +16,7 @@
   font-size: 1rem;
 }
 
-.message > div:first-child {
+.talk-message > div:first-child {
   width: 32px;
   height: 32px;
 
@@ -30,12 +30,12 @@
 }
 
 /* The button with three dots */
-.message > div:last-child {
+.talk-message > div:last-child {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
 
-.extra-info {
+.talk-extra-info {
   cursor: pointer;
   display: inline-block;
   min-width: 15px;
@@ -65,21 +65,21 @@
   bottom: 0px;
 }
 
-.extra-info:hover {
+.talk-extra-info:hover {
   background: #CACBCD;
 }
 
 /* Talk template. Message notification */
-.message > div.notification {
+.talk-message > div.notification {
   background-color: #5ABB7B;
   border-color: #449D44;
 }
 
-.add-message > form {
+.talk-add-message > form {
   padding: 5px 5px 5px 5px;
   background-color: rgba(0, 0, 0, 0.0470588);
 }
 
-.add-message:first-child {
+.talk-add-message:first-child {
   margin-left: 5px;
 }

@@ -1,7 +1,7 @@
 <template>
   <require from="./talk.css"></require>
 
-  <div class="add-message">
+  <div class="talk-add-message">
     <div>
       <button class="positive ui button"
         click.delegate="toggleAddMessagePopup()">
@@ -32,7 +32,7 @@
     </form>
   </div>
 
-  <div repeat.for="m of messages" class="message">
+  <div repeat.for="m of messages" class="talk-message">
     <div class="${m.msgtype}">
       <i if.bind="m.msgtype == 'notification'" class="comment outline icon"></i>
     </div>
@@ -40,7 +40,7 @@
       ${m.message}
     </div>
     <div>
-      <div data-title="by ${m.username}" data-content="on ${m.stream}" class="extra-info"
+      <div data-title="by ${m.username}" data-content="on ${m.stream}" class="talk-extra-info"
         mouseover.delegate="displayMoreInformationPopup($event.target)">
         ...
       </div>
