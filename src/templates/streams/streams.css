@@ -1,0 +1,45 @@
+/******************************************************************************
+ * Streams template
+ */
+.streams > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 5px 5px 5px;
+  margin: 0 0 0 0;
+
+  width: 100%;
+
+  font-size: 1rem;
+}
+
+.streams > div:first-child {
+  width: auto;
+  height: auto;
+
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* The button with three dots */
+.streams > div:last-child {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.streams > div > h1 {
+  font-size: 1.1rem;
+}
+
+.streams-menu > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 5px 5px 5px;
+  margin: 0 0 0 0;
+
+  width: auto;
+  height: auto;
+}
+
+.streams-menu > button {
+  float: right !important;
+}
