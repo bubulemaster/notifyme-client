@@ -14,14 +14,7 @@ export class NotifyMeIoClient {
 
   /**
    *
-   * @param config = {
-   *   username: 'my_user',
-   *   password: 'my_user_password',
-   *   url: 'my_url',
-   *   onLogin: callback when login,
-   *   onDisconnect: callback when lost server connection,
-   *   onLoginError: callback if login error
-   * }
+   * @param config configuration @see IoConfig
    */
   connect (config) {
     // If previous connection exists, close it

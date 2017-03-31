@@ -50,6 +50,10 @@ function createWindow () {
         willQuitApp = true
         mainWindow.close()
       }
+    },
+    {
+      label: 'Debug',
+      click: () => mainWindow.webContents.openDevTools()
     }
   ])
 

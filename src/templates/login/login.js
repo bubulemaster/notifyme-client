@@ -4,6 +4,7 @@ import { NotifyMeStore } from '../../redux/notifymestore'
 import { connect } from '../../redux/actions'
 
 import { NotifyMeIoClient } from '../../io/io-client'
+import { IoConfig } from '../../io/io-config'
 
 @inject(NotifyMeStore, NotifyMeIoClient)
 export class Login {
@@ -26,14 +27,12 @@ export class Login {
   }
 
   login () {
-    this.io.connect({
-      username: this.username,
-      password: this.password,
-      url: this.url,
-      onDisconnect: () => console.log('Disconnected'),
-      onLoginError: () => console.log('Login error'),
-      onLogin: () =>
-        this.store.dispatch(connect(this.username, this.password, this.url))
-    })
+    let config = new IoConfig(this.username, this.password, this.url)
+    config.onDisconnect = () => console.log('Disconnected')
+    config.onLoginError = () => console.log('Login error'),
+    config.onLogin = () =>
+      this.store.dispatch(connect(this.username, this.password, this.url))
+
+    this.io.connect(config)
   }
 }
